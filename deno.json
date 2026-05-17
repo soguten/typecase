@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "deno.ns",
+      "esnext"
+    ],
+    "jsx": "react-jsx",
+    "jsxImportSource": "mainz",
+    "strict": true
+  },
+  "imports": {
+    "@deno/vite-plugin": "npm:@deno/vite-plugin@2.0.2",
+    "@std/assert": "jsr:@std/assert",
+    "mainz": "jsr:@mainz/mainz@0.1.0-alpha.33",
+    "mainz/": "jsr:/@mainz/mainz@0.1.0-alpha.33/",
+    "mainz/typecase": "./src/index.ts",
+    "typecase": "./src/index.ts",
+    "vite": "npm:vite@7.3.1"
+  },
+  "tasks": {
+    "dev": "deno run -A --config deno.json jsr:@mainz/mainz@0.1.0-alpha.27/cli dev",
+    "build": "deno run -A --config deno.json jsr:@mainz/mainz@0.1.0-alpha.27/cli build",
+    "preview": "deno run -A --config deno.json jsr:@mainz/mainz@0.1.0-alpha.27/cli preview",
+    "test": "deno run -A --config deno.json jsr:@mainz/mainz@0.1.0-alpha.27/cli test",
+    "diagnose": "deno run -A --config deno.json jsr:@mainz/mainz@0.1.0-alpha.27/cli diagnose"
+  }
+}
